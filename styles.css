@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000A1F;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    background-color: #001B3A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: 24px;
+    color: #00A8FF;
+    margin: 0;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.menu-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #001B3A;
+    border-radius: 8px;
+    padding: 10px;
+    display: none; /* Alapértelmezésben rejtve */
+    flex-direction: column;
+    width: 150px; /* Reszponzív méret */
+}
+
+.nav-menu.active {
+    display: flex; /* Megnyitás esetén jelenik meg */
+}
+
+.nav-menu a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center; /* Középre igazítás */
+    font-weight: bold;
+    border-bottom: 1px solid #00A8FF; /* Elválasztó vonal */
+}
+
+.nav-menu a:hover {
+    color: #00A8FF;
+}
+
+.container {
+    text-align: center;
+    margin-top: 150px; /* A menü elkerülése érdekében */
+}
+
+h1 {
+    font-size: 48px;
+}
+
+#typed-text {
+    color: #00A8FF;
+    font-weight: bold;
+}
+
+#cursor {
+    font-weight: bold;
+    color: white;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.button-container {
+    margin-top: 20px;
+}
