@@ -1,0 +1,97 @@
+/* Add this CSS to your existing CSS file */
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: slideDown 1s ease-out;
+}
+
+/* Add this CSS to your existing CSS file */
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #001B3A;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Base styling for the menu icon */
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.menu-icon span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+/* Position each bar */
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 20px;
+}
+
+/* Transform to "X" when the menu icon is active */
+.menu-icon.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
