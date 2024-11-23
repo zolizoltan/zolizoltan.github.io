@@ -32,7 +32,7 @@ body {
 
 .menu-icon {
     cursor: pointer;
-    display: right;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 25px;
